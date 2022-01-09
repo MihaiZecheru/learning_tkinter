@@ -28,3 +28,32 @@ myButton2.pack()
 # NOTE: the value can be a hex instead of just the color name
 
 root.mainloop()
+
+
+
+
+# Creating Buttons cont
+# main.py
+
+from tkinter import *
+
+root = Tk()
+
+e = Entry(root, width=50, borderwidth=5)
+e.pack()
+# makes an user input widget. (small text box)
+
+e.insert(0, "Enter your name:")
+# writes "Enter your name:" into the text box created
+
+
+def myClick():
+    myLabel = Label(root, text=f"Hello {e.get()}")
+    myLabel.pack()
+# prints the box's input when the function is called.
+# Entry.get() takes the value entered in the entry
+
+myButton = Button(root, text="Big Button", padx=50, pady=50, command=myClick, fg="blue", bg="black")
+myButton.pack()
+
+root.mainloop()
