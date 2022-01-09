@@ -15,3 +15,20 @@ myLabel2.grid(row=1, column=0)
 # because there's nothing in column 2, 3, 4, and 5
 
 root.mainloop()
+
+
+
+# Grid System alternation
+# main.py
+
+from tkinter import *
+
+root = Tk()
+
+myLabel1 = Label(root, text="Hello World").grid(row=0, column=1)
+myLabel2 = Label(root, text="My name is Chris Zecheru").grid(row=1, column=0)
+# this will produce the same result as the myLabel.grid() stuff
+# because python is object oriented.
+# ergo: this also works!
+
+root.mainloop()
